@@ -4,7 +4,6 @@
 
 ```shell
 curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/open
-  -H "Authorization: {token}"
 ```
 
 > The above command returns JSON structured like this:
@@ -952,5 +951,5 @@ This endpoint retrieves current, open locations.
 | timestamp | yes      | Formatted as YYYY-MM-DD                        |
 
 <aside class="success">
-Remember — all requests are monitored. Please don't be spammy with your services 😀.
+Request volumes are logged and monitored. Please don't be spammy with your services 😀.
 </aside>

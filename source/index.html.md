@@ -1,5 +1,5 @@
 ---
-title: nutricloud&copy; API 0.5b
+title: Dine On Campus&reg; API 0.5b
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
@@ -20,7 +20,7 @@ search: true
 
 # Introduction
 
-Welcome to the **nutricloud**&copy; API! You can use the API to access events, special offers, locations, and menus. We'll be adding more in the near future.
+Welcome to the **Dine On Campus**&reg; API! You can use the API to access events, special offers, locations, and menus. We'll be adding more in the near future.
 
 You can view code examples in the dark area to the right.
 
@@ -35,9 +35,9 @@ curl -XPOST -sk -F 'email={email}' -F 'password={password}' https://kapi.dineonc
 
 > Make sure to replace `{key}` with your API key
 
-**nutricloud**&copy; uses API tokens for access on a per-developer basis. To request a new developer account &mdash; for now &mdash; please contact Dylan Bromby (dylan@roaringsky.com). We'll be automating this process soon.
+**Dine On Campus**&reg; uses API tokens for access on a per-developer basis. To request a new developer account &mdash; for now &mdash; please contact Dylan Bromby (dylan@roaringsky.com). We'll be automating this process soon.
 
-**nutricloud**&copy; expects the API token to be included in request headers:
+**Dine On Campus**&reg; expects the API token to be included in request headers:
 
 `Authorization: {token}`
 
@@ -51,7 +51,6 @@ You must replace <code>{token}</code> with your personal API token.
 
 ```shell
 curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/location/menu
-  -H "Authorization: {token}"
 ```
 
 > The above command returns JSON structured like this:
@@ -7993,5 +7992,5 @@ This endpoint retrieves a menu for a specific day.
 | date        | yes      | Formatted as YYYY-MM-DD                                         |
 
 <aside class="success">
-Remember — all requests are monitored. Please don't be spammy with your services 😀.
+Request volumes are logged and monitored. Please don't be spammy with your services 😀.
 </aside>
