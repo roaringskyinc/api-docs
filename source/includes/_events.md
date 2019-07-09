@@ -70,5 +70,5 @@ This endpoint retrieves all upcoming events.
 | site_id   | yes      | The Id of your site should be provided to you. |
 
 <aside class="success">
-Request volumes are logged and monitored. Please don't be spammy with your services 😀.
+Request volumes are logged and monitored. Request thresholds will be enforced in the near future 😀.
 </aside>

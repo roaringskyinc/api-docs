@@ -7993,5 +7993,5 @@ This endpoint retrieves a menu for a specific day.
 | date        | yes      | Formatted as YYYY-MM-DD                                         |
 
 <aside class="success">
-Request volumes are logged and monitored. Please don't be spammy with your services 😀.
+Request volumes are logged and monitored. Request thresholds will be enforced in the near future 😀.
 </aside>
