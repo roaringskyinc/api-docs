@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta content="IE=edge,chrome=1" http-equiv="X-UA-Compatible">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <title>nutricloud&copy; API 0.5b</title>
+    <title>Dine On Campus&reg; API 0.5b</title>
 
     <style>
       .highlight table td { padding: 5px; }
@@ -209,7 +209,7 @@
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/nc-logo.png" class="logo" alt="Nc logo" />
+      <img src="images/doc-logo.png" class="logo" alt="Doc logo" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
         </div>
@@ -253,7 +253,7 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the <strong>nutricloud</strong>&copy; API! You can use the API to access events, special offers, locations, and menus. We&#39;ll be adding more in the near future.</p>
+<p>Welcome to the <strong>Dine On Campus</strong>&reg; API! You can use the API to access events, special offers, locations, and menus. We&#39;ll be adding more in the near future.</p>
 
 <p>You can view code examples in the dark area to the right.</p>
 <h1 id='authentication'>Authentication</h1>
@@ -267,9 +267,9 @@ curl -XPOST -sk -F <span class="s1">'email={email}'</span> -F <span class="s1">'
 <p>Make sure to replace <code>{key}</code> with your API key</p>
 </blockquote>
 
-<p><strong>nutricloud</strong>&copy; uses API tokens for access on a per-developer basis. To request a new developer account &mdash; for now &mdash; please contact Dylan Bromby (dylan@roaringsky.com). We&#39;ll be automating this process soon.</p>
+<p><strong>Dine On Campus</strong>&reg; uses API tokens for access on a per-developer basis. To request a new developer account &mdash; for now &mdash; please contact Dylan Bromby (dylan@roaringsky.com). We&#39;ll be automating this process soon.</p>
 
-<p><strong>nutricloud</strong>&copy; expects the API token to be included in request headers:</p>
+<p><strong>Dine On Campus</strong>&reg; expects the API token to be included in request headers:</p>
 
 <p><code>Authorization: {token}</code></p>
 
@@ -277,7 +277,6 @@ curl -XPOST -sk -F <span class="s1">'email={email}'</span> -F <span class="s1">'
 You must replace <code>{token}</code> with your personal API token.
 </aside>
 <h1 id='menu'>Menu</h1><h2 id='get-a-single-menu'>Get a single menu</h2><pre class="highlight shell tab-shell"><code>curl -H <span class="s2">"Authorization: Bearer {token}"</span> https://kapi.dineoncampus.com/location/menu
-  -H <span class="s2">"Authorization: {token}"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -8235,10 +8234,9 @@ You must replace <code>{token}</code> with your personal API token.
 </tbody></table>
 
 <aside class="success">
-Remember — all requests are monitored. Please don't be spammy with your services 😀.
+Request volumes are logged and monitored. Please don't be spammy with your services 😀.
 </aside>
 <h1 id='locations'>Locations</h1><h2 id='get-open-locations'>Get open locations</h2><pre class="highlight shell tab-shell"><code>curl -H <span class="s2">"Authorization: Bearer {token}"</span> https://kapi.dineoncampus.com/locations/open
-  -H <span class="s2">"Authorization: {token}"</span>
 </code></pre>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
@@ -9194,7 +9192,7 @@ Remember — all requests are monitored. Please don't be spammy with your servic
 </tbody></table>
 
 <aside class="success">
-Remember — all requests are monitored. Please don't be spammy with your services 😀.
+Request volumes are logged and monitored. Please don't be spammy with your services 😀.
 </aside>
 <h1 id='errors'>Errors</h1>
 <aside class="notice">
