@@ -1,5 +1,5 @@
 ---
-title: API Reference TEST
+title: nutricloud&copy; API 0.5b
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
@@ -12,6 +12,7 @@ toc_footers:
   - <a href='https://github.com/lord/slate'>Documentation Powered by Slate</a>
 
 includes:
+  - locations
   - errors
 
 search: true
@@ -7984,12 +7985,12 @@ This endpoint retrieves a menu for a specific day.
 
 ### Query Parameters
 
-| Parameter   | Required | Description                                              |
-| ----------- | -------- | -------------------------------------------------------- |
-| site_id     | yes      | The Id of your site should be provided to you.           |
-| location_id | yes      | The location Id. Obtained using the /locations endpoint. |
-| platform    | yes      | Should be set to 0.                                      |
-| date        | yes      | Formatted as YYYY-MM-DD                                  |
+| Parameter   | Required | Description                                                     |
+| ----------- | -------- | --------------------------------------------------------------- |
+| site_id     | yes      | The Id of your site should be provided to you.                  |
+| location_id | yes      | The location Id. Obtained using the `/locations/open` endpoint. |
+| platform    | yes      | Should be set to 0.                                             |
+| date        | yes      | Formatted as YYYY-MM-DD                                         |
 
 <aside class="success">
 Remember — all requests are monitored. Please don't be spammy with your services 😀.
