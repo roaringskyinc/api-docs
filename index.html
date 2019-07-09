@@ -241,13 +241,17 @@
               </ul>
           </li>
           <li>
+            <a href="#events" class="toc-h1 toc-link" data-title="Events">Events</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-upcoming-events" class="toc-h2 toc-link" data-title="Get upcoming events">Get upcoming events</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
-        <ul class="toc-footer">
-            <li><a href='#'>Sign Up for a Developer Key</a></li>
-            <li><a href='https://github.com/lord/slate'>Documentation Powered by Slate</a></li>
-        </ul>
     </div>
     <div class="page-wrapper">
       <div class="dark-box"></div>
@@ -267,7 +271,7 @@ curl -XPOST -sk -F <span class="s1">'email={email}'</span> -F <span class="s1">'
 <p>Make sure to replace <code>{key}</code> with your API key</p>
 </blockquote>
 
-<p><strong>Dine On Campus</strong>&reg; uses API tokens for access on a per-developer basis. To request a new developer account &mdash; for now &mdash; please contact Dylan Bromby (dylan@roaringsky.com). We&#39;ll be automating this process soon.</p>
+<p><strong>Dine On Campus</strong>&reg; uses API tokens for access on a per-developer basis. To request access for an additional developer &mdash; for now &mdash; please contact Dylan Bromby (dylan@roaringsky.com). We&#39;ll be automating this process in the near future.</p>
 
 <p><strong>Dine On Campus</strong>&reg; expects the API token to be included in request headers:</p>
 
@@ -9194,12 +9198,85 @@ Request volumes are logged and monitored. Please don't be spammy with your servi
 <aside class="success">
 Request volumes are logged and monitored. Please don't be spammy with your services 😀.
 </aside>
-<h1 id='errors'>Errors</h1>
-<aside class="notice">
-This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
-</aside>
+<h1 id='events'>Events</h1><h2 id='get-upcoming-events'>Get upcoming events</h2><pre class="highlight shell tab-shell"><code>curl -H <span class="s2">"Authorization: Bearer {token}"</span> https://kapi.dineoncampus.com/events/upcoming
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="s2">"current_events"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Looking to learn more about Superfood Tomato?</span><span class="se">\n</span><span class="s2">Make sure to stop by Jasper Kane Café from</span><span class="se">\n</span><span class="s2">1PM – 2PM to learn more about the nutritional</span><span class="se">\n</span><span class="s2">benefits of Tomatoes."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-09T11:00:00.000-07:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"featured"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d13d84e4198d409c39c8056"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-09T10:00:00.000-07:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Superfood Tabling at Jasper Kane Café"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Locally grown produce and freshly prepared</span><span class="se">\n</span><span class="s2">bakery items will be available at The</span><span class="se">\n</span><span class="s2">Marketplace at Kimmel from 11AM – 2PM!</span><span class="se">\n</span><span class="s2">Don’t miss out on supporting some of our</span><span class="se">\n</span><span class="s2">amazing local farmers &amp; tasting their delicious</span><span class="se">\n</span><span class="s2">produce!"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-11T11:00:00.000-07:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"featured"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d13d8774198d409c39c9158"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-11T08:00:00.000-07:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Farmers Market at The Marketplace at Kimmel"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"We’re tossing up something special at the</span><span class="se">\n</span><span class="s2">NYU Eats at Downstein for dinner on</span><span class="se">\n</span><span class="s2">Monday night. Make sure to stop by to create</span><span class="se">\n</span><span class="s2">your own wings."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-15T17:00:00.000-07:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"featured"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d13d8bf4198d409c39c9174"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-15T14:00:00.000-07:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Wing Day at NYU Eats at Downstein"</span><span class="w">
+    </span><span class="p">},</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Looking to learn more about Superfood Tomato?</span><span class="se">\n</span><span class="s2">Make sure to stop by The Marketplace at</span><span class="se">\n</span><span class="s2">Kimmel from 1PM – 2PM to learn more about the</span><span class="se">\n</span><span class="s2">nutritional benefits of Tomatoes with RD</span><span class="se">\n</span><span class="s2">Christina."</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-16T11:00:00.000-07:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"featured"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d13d8f14198d409c39c9181"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-16T10:00:00.000-07:00"</span><span class="p">,</span><span class="w">
+      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Superfood Tabling at The Marketplace at Kimmel"</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">],</span><span class="w">
+  </span><span class="s2">"event_slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"events"</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves all upcoming events.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET http://kapi.dineoncampus.com/events/upcoming</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>site_id</td>
+<td>yes</td>
+<td>The Id of your site should be provided to you.</td>
+</tr>
+</tbody></table>
 
-<p>The Kittn API uses the following error codes:</p>
+<aside class="success">
+Request volumes are logged and monitored. Please don't be spammy with your services 😀.
+</aside>
+<h1 id='errors'>Errors</h1>
+<!-- <aside class="notice">
+This error section is stored in a separate file in <code>includes/_errors.md</code>. Slate allows you to optionally separate out your docs into many files...just save them to the <code>includes</code> folder and add them to the top of your <code>index.md</code>'s frontmatter. Files are included in the order listed.
+</aside> -->
+
+<p>The <strong>Dine On Campus</strong>&reg; API uses the following error codes:</p>
 
 <table><thead>
 <tr>
@@ -9209,43 +9286,43 @@ This error section is stored in a separate file in <code>includes/_errors.md</co
 </thead><tbody>
 <tr>
 <td>400</td>
-<td>Bad Request -- Your request is invalid.</td>
+<td>Bad Request -- Invalid request.</td>
 </tr>
 <tr>
 <td>401</td>
-<td>Unauthorized -- Your API key is wrong.</td>
+<td>Unauthorized -- Invalid API key.</td>
 </tr>
 <tr>
 <td>403</td>
-<td>Forbidden -- The request is unauthorized.</td>
+<td>Forbidden -- Unauthorized request.</td>
 </tr>
 <tr>
 <td>404</td>
-<td>Not Found -- The specified endpoint could not be found.</td>
+<td>Not Found -- Invalid endpoint.</td>
 </tr>
 <tr>
 <td>405</td>
-<td>Method Not Allowed -- You tried to access an invalid method.</td>
+<td>Method Not Allowed -- Invalid method.</td>
 </tr>
 <tr>
 <td>406</td>
-<td>Not Acceptable -- You requested a format that isn&#39;t json.</td>
+<td>Not Acceptable -- Invalid format.</td>
 </tr>
 <tr>
 <td>410</td>
-<td>Gone -- The requested endpoint has been removed from our servers.</td>
+<td>Gone -- Endpoint no longer exists.</td>
 </tr>
 <tr>
 <td>429</td>
-<td>Too Many Requests -- You&#39;ve exceeded your request threshold.</td>
+<td>Too Many Requests -- Request threshold exceeded.</td>
 </tr>
 <tr>
 <td>500</td>
-<td>Internal Server Error -- We had a problem with our server. Try again later.</td>
+<td>Internal Server Error -- Unexpected server error. Please try again later.</td>
 </tr>
 <tr>
 <td>503</td>
-<td>Service Unavailable -- We&#39;re temporarily offline for maintenance. Please try again later.</td>
+<td>Service Unavailable -- Offline. Maintenance or possible network error. Please try again later.</td>
 </tr>
 </tbody></table>
 
