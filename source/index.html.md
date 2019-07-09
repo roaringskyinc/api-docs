@@ -13,6 +13,7 @@ toc_footers:
 
 includes:
   - locations
+  - events
   - errors
 
 search: true
@@ -35,7 +36,7 @@ curl -XPOST -sk -F 'email={email}' -F 'password={password}' https://kapi.dineonc
 
 > Make sure to replace `{key}` with your API key
 
-**Dine On Campus**&reg; uses API tokens for access on a per-developer basis. To request a new developer account &mdash; for now &mdash; please contact Dylan Bromby (dylan@roaringsky.com). We'll be automating this process soon.
+**Dine On Campus**&reg; uses API tokens for access on a per-developer basis. To request access for an additional developer &mdash; for now &mdash; please contact Dylan Bromby (dylan@roaringsky.com). We'll be automating this process in the near future.
 
 **Dine On Campus**&reg; expects the API token to be included in request headers:
 
