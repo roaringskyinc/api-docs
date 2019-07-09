@@ -19,7 +19,7 @@ search: true
 
 # Introduction
 
-Welcome to the Nutricloud API! You can use the API to access events, special offers, locations, and menus. We'll be adding more in the near future.
+Welcome to the **nutricloud**&copy; API! You can use the API to access events, special offers, locations, and menus. We'll be adding more in the near future.
 
 You can view code examples in the dark area to the right.
 
@@ -32,11 +32,11 @@ You can view code examples in the dark area to the right.
 curl -XPOST -sk -F 'email={email}' -F 'password={password}' https://kapi.dineoncampus.com/{key}
 ```
 
-> Make sure to replace `{key}` with your API key.
+> Make sure to replace `{key}` with your API key
 
-Nutricloud uses API tokens for access on a per-developer basis. To request a new developer account please contact Dylan Bromby (dylan@roaringsky.com).
+**nutricloud**&copy; uses API tokens for access on a per-developer basis. To request a new developer account &mdash; for now &mdash; please contact Dylan Bromby (dylan@roaringsky.com). We'll be automating this process soon.
 
-Nutricloud expects the API token to be included in request headers:
+**nutricloud**&copy; expects the API token to be included in request headers:
 
 `Authorization: {token}`
 
