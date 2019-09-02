@@ -798,10 +798,10 @@ This endpoint retrieves current, open locations.
 | site_id   | yes      | The Id of your site should be provided to you. |
 | timestamp | yes      | Formatted as YYYY-MM-DD                        |
 
-## Get open locations
+## Get location details
 
 ```shell
-curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/open
+curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/location/info
 ```
 
 > The above command returns JSON structured like this:
