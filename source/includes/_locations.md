@@ -18,12 +18,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
       "schedules": [
         {
           "created_at": "2019-01-11T07:02:36.531-08:00",
-          "days": [
-            1,
-            2,
-            3,
-            4
-          ],
+          "days": [1, 2, 3, 4],
           "end": "2019-05-07T15:00:19.000-07:00",
           "end_hour": 18,
           "end_minutes": 0,
@@ -36,9 +31,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-01-11T07:02:47.823-08:00",
-          "days": [
-            5
-          ],
+          "days": [5],
           "end": "2019-05-03T10:00:37.000-07:00",
           "end_hour": 13,
           "end_minutes": 0,
@@ -51,9 +44,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-05-01T12:56:51.732-07:00",
-          "days": [
-            3
-          ],
+          "days": [3],
           "end": "2019-05-08T14:00:37.000-07:00",
           "end_hour": 17,
           "end_minutes": 0,
@@ -76,9 +67,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
       "schedules": [
         {
           "created_at": "2019-01-11T07:01:02.418-08:00",
-          "days": [
-            0
-          ],
+          "days": [0],
           "end": "2019-05-05T20:00:43.000-07:00",
           "end_hour": 23,
           "end_minutes": 0,
@@ -91,12 +80,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-01-11T07:01:24.504-08:00",
-          "days": [
-            1,
-            2,
-            3,
-            4
-          ],
+          "days": [1, 2, 3, 4],
           "end": "2019-08-02T13:00:06.000-07:00",
           "end_hour": 16,
           "end_minutes": 0,
@@ -109,9 +93,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-01-11T07:01:51.442-08:00",
-          "days": [
-            5
-          ],
+          "days": [5],
           "end": "2019-08-02T12:00:25.000-07:00",
           "end_hour": 15,
           "end_minutes": 0,
@@ -124,9 +106,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-01-11T07:02:10.098-08:00",
-          "days": [
-            6
-          ],
+          "days": [6],
           "end": "2019-05-04T19:00:52.000-07:00",
           "end_hour": 22,
           "end_minutes": 0,
@@ -149,12 +129,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
       "schedules": [
         {
           "created_at": "2019-01-11T07:00:13.992-08:00",
-          "days": [
-            1,
-            2,
-            3,
-            4
-          ],
+          "days": [1, 2, 3, 4],
           "end": "2019-05-08T12:00:01.000-07:00",
           "end_hour": 15,
           "end_minutes": 0,
@@ -167,9 +142,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-01-11T07:00:37.727-08:00",
-          "days": [
-            5
-          ],
+          "days": [5],
           "end": "2019-05-03T10:00:21.000-07:00",
           "end_hour": 13,
           "end_minutes": 0,
@@ -192,12 +165,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
       "schedules": [
         {
           "created_at": "2019-01-11T06:58:51.493-08:00",
-          "days": [
-            1,
-            2,
-            3,
-            4
-          ],
+          "days": [1, 2, 3, 4],
           "end": "2019-08-02T13:00:40.000-07:00",
           "end_hour": 16,
           "end_minutes": 0,
@@ -210,9 +178,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-05-13T09:42:33.906-07:00",
-          "days": [
-            5
-          ],
+          "days": [5],
           "end": "2019-08-02T12:00:24.000-07:00",
           "end_hour": 15,
           "end_minutes": 0,
@@ -235,12 +201,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
       "schedules": [
         {
           "created_at": "2019-01-11T06:58:10.666-08:00",
-          "days": [
-            1,
-            2,
-            3,
-            4
-          ],
+          "days": [1, 2, 3, 4],
           "end": "2019-05-02T19:00:37.000-07:00",
           "end_hour": 22,
           "end_minutes": 0,
@@ -253,9 +214,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-01-11T06:58:34.751-08:00",
-          "days": [
-            5
-          ],
+          "days": [5],
           "end": "2019-05-10T13:00:18.000-07:00",
           "end_hour": 16,
           "end_minutes": 0,
@@ -268,11 +227,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-05-01T12:58:14.000-07:00",
-          "days": [
-            1,
-            2,
-            3
-          ],
+          "days": [1, 2, 3],
           "end": "2019-05-08T21:00:50.000-07:00",
           "end_hour": 0,
           "end_minutes": 0,
@@ -285,9 +240,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-05-01T12:58:42.813-07:00",
-          "days": [
-            4
-          ],
+          "days": [4],
           "end": "2019-05-09T16:00:26.000-07:00",
           "end_hour": 19,
           "end_minutes": 0,
@@ -300,10 +253,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-05-01T12:58:59.428-07:00",
-          "days": [
-            0,
-            6
-          ],
+          "days": [0, 6],
           "end": "2019-05-05T14:00:49.000-07:00",
           "end_hour": 17,
           "end_minutes": 0,
@@ -326,12 +276,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
       "schedules": [
         {
           "created_at": "2019-01-11T06:57:00.935-08:00",
-          "days": [
-            1,
-            2,
-            3,
-            4
-          ],
+          "days": [1, 2, 3, 4],
           "end": "2019-05-08T14:00:48.000-07:00",
           "end_hour": 17,
           "end_minutes": 0,
@@ -344,9 +289,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-01-11T06:57:15.098-08:00",
-          "days": [
-            5
-          ],
+          "days": [5],
           "end": "2019-05-10T11:00:01.000-07:00",
           "end_hour": 14,
           "end_minutes": 0,
@@ -359,9 +302,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-05-01T12:47:27.819-07:00",
-          "days": [
-            4
-          ],
+          "days": [4],
           "end": "2019-05-09T12:00:12.000-07:00",
           "end_hour": 15,
           "end_minutes": 0,
@@ -384,12 +325,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
       "schedules": [
         {
           "created_at": "2019-01-11T06:56:31.426-08:00",
-          "days": [
-            1,
-            2,
-            3,
-            4
-          ],
+          "days": [1, 2, 3, 4],
           "end": "2019-05-08T11:00:06.000-07:00",
           "end_hour": 14,
           "end_minutes": 0,
@@ -402,9 +338,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-01-11T06:56:43.637-08:00",
-          "days": [
-            5
-          ],
+          "days": [5],
           "end": "2019-05-03T10:00:33.000-07:00",
           "end_hour": 13,
           "end_minutes": 0,
@@ -427,12 +361,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
       "schedules": [
         {
           "created_at": "2019-01-11T06:53:54.119-08:00",
-          "days": [
-            1,
-            2,
-            3,
-            4
-          ],
+          "days": [1, 2, 3, 4],
           "end": "2019-08-02T12:00:34.000-07:00",
           "end_hour": 15,
           "end_minutes": 0,
@@ -445,9 +374,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-01-11T06:54:12.588-08:00",
-          "days": [
-            5
-          ],
+          "days": [5],
           "end": "2019-08-02T10:00:55.000-07:00",
           "end_hour": 13,
           "end_minutes": 0,
@@ -470,12 +397,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
       "schedules": [
         {
           "created_at": "2019-01-11T06:52:58.074-08:00",
-          "days": [
-            1,
-            2,
-            3,
-            4
-          ],
+          "days": [1, 2, 3, 4],
           "end": "2019-05-07T15:00:50.000-07:00",
           "end_hour": 18,
           "end_minutes": 0,
@@ -488,9 +410,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-01-11T06:53:13.478-08:00",
-          "days": [
-            5
-          ],
+          "days": [5],
           "end": "2019-05-10T11:00:59.000-07:00",
           "end_hour": 14,
           "end_minutes": 0,
@@ -503,9 +423,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-05-01T13:02:05.164-07:00",
-          "days": [
-            3
-          ],
+          "days": [3],
           "end": "2019-05-08T14:00:41.000-07:00",
           "end_hour": 17,
           "end_minutes": 0,
@@ -518,9 +436,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-05-01T13:02:15.393-07:00",
-          "days": [
-            4
-          ],
+          "days": [4],
           "end": "2019-05-09T13:00:06.000-07:00",
           "end_hour": 16,
           "end_minutes": 0,
@@ -543,12 +459,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
       "schedules": [
         {
           "created_at": "2019-01-11T06:52:32.390-08:00",
-          "days": [
-            1,
-            2,
-            3,
-            4
-          ],
+          "days": [1, 2, 3, 4],
           "end": "2019-05-03T15:00:08.000-07:00",
           "end_hour": 18,
           "end_minutes": 0,
@@ -561,9 +472,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-01-11T06:52:44.824-08:00",
-          "days": [
-            5
-          ],
+          "days": [5],
           "end": "2019-05-10T10:00:33.000-07:00",
           "end_hour": 13,
           "end_minutes": 0,
@@ -576,11 +485,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-05-01T13:00:11.930-07:00",
-          "days": [
-            1,
-            2,
-            3
-          ],
+          "days": [1, 2, 3],
           "end": "2019-05-08T13:00:56.000-07:00",
           "end_hour": 16,
           "end_minutes": 0,
@@ -593,9 +498,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-05-01T13:00:24.968-07:00",
-          "days": [
-            4
-          ],
+          "days": [4],
           "end": "2019-05-09T12:00:12.000-07:00",
           "end_hour": 15,
           "end_minutes": 0,
@@ -618,12 +521,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
       "schedules": [
         {
           "created_at": "2019-01-11T06:51:40.808-08:00",
-          "days": [
-            1,
-            2,
-            3,
-            4
-          ],
+          "days": [1, 2, 3, 4],
           "end": "2019-05-07T15:00:07.000-07:00",
           "end_hour": 18,
           "end_minutes": 0,
@@ -636,9 +534,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-01-11T06:51:57.131-08:00",
-          "days": [
-            5
-          ],
+          "days": [5],
           "end": "2019-05-10T11:00:42.000-07:00",
           "end_hour": 14,
           "end_minutes": 0,
@@ -651,9 +547,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-05-01T13:03:22.549-07:00",
-          "days": [
-            3
-          ],
+          "days": [3],
           "end": "2019-05-08T14:00:07.000-07:00",
           "end_hour": 17,
           "end_minutes": 0,
@@ -666,9 +560,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-05-01T13:03:22.701-07:00",
-          "days": [
-            4
-          ],
+          "days": [4],
           "end": "2019-05-09T13:00:07.000-07:00",
           "end_hour": 16,
           "end_minutes": 0,
@@ -691,12 +583,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
       "schedules": [
         {
           "created_at": "2019-01-11T06:50:39.901-08:00",
-          "days": [
-            1,
-            2,
-            3,
-            4
-          ],
+          "days": [1, 2, 3, 4],
           "end": "2019-05-07T16:00:19.000-07:00",
           "end_hour": 19,
           "end_minutes": 0,
@@ -709,9 +596,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-01-11T06:50:53.874-08:00",
-          "days": [
-            5
-          ],
+          "days": [5],
           "end": "2019-05-03T11:00:41.000-07:00",
           "end_hour": 14,
           "end_minutes": 0,
@@ -724,9 +609,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-05-01T12:51:54.142-07:00",
-          "days": [
-            3
-          ],
+          "days": [3],
           "end": "2019-05-08T14:00:40.000-07:00",
           "end_hour": 17,
           "end_minutes": 0,
@@ -739,9 +622,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-05-01T12:52:06.853-07:00",
-          "days": [
-            4
-          ],
+          "days": [4],
           "end": "2019-05-09T11:00:54.000-07:00",
           "end_hour": 14,
           "end_minutes": 0,
@@ -754,9 +635,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-05-01T12:52:22.221-07:00",
-          "days": [
-            5
-          ],
+          "days": [5],
           "end": "2019-05-10T10:00:13.000-07:00",
           "end_hour": 13,
           "end_minutes": 0,
@@ -769,12 +648,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-05-14T08:50:33.575-07:00",
-          "days": [
-            1,
-            2,
-            3,
-            4
-          ],
+          "days": [1, 2, 3, 4],
           "end": "2019-08-02T11:00:16.000-07:00",
           "end_hour": 14,
           "end_minutes": 0,
@@ -787,9 +661,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-05-14T08:50:42.781-07:00",
-          "days": [
-            5
-          ],
+          "days": [5],
           "end": "2019-08-02T10:00:35.000-07:00",
           "end_hour": 13,
           "end_minutes": 0,
@@ -812,12 +684,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
       "schedules": [
         {
           "created_at": "2019-01-22T09:47:34.548-08:00",
-          "days": [
-            1,
-            2,
-            3,
-            4
-          ],
+          "days": [1, 2, 3, 4],
           "end": "2019-05-03T17:00:02.000-07:00",
           "end_hour": 20,
           "end_minutes": 0,
@@ -830,9 +697,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-01-22T09:47:47.569-08:00",
-          "days": [
-            5
-          ],
+          "days": [5],
           "end": "2019-05-03T16:00:37.000-07:00",
           "end_hour": 19,
           "end_minutes": 0,
@@ -845,9 +710,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-01-22T12:44:47.386-08:00",
-          "days": [
-            0
-          ],
+          "days": [0],
           "end": "2019-05-05T17:00:37.000-07:00",
           "end_hour": 20,
           "end_minutes": 0,
@@ -860,9 +723,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-01-22T12:47:14.481-08:00",
-          "days": [
-            6
-          ],
+          "days": [6],
           "end": "2019-05-04T16:00:03.000-07:00",
           "end_hour": 19,
           "end_minutes": 0,
@@ -875,12 +736,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-05-01T12:40:49.198-07:00",
-          "days": [
-            1,
-            2,
-            3,
-            4
-          ],
+          "days": [1, 2, 3, 4],
           "end": "2019-05-09T17:00:34.000-07:00",
           "end_hour": 20,
           "end_minutes": 0,
@@ -893,9 +749,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-05-01T12:41:35.195-07:00",
-          "days": [
-            5
-          ],
+          "days": [5],
           "end": "2019-05-10T13:00:17.000-07:00",
           "end_hour": 16,
           "end_minutes": 0,
@@ -908,13 +762,7 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/
         },
         {
           "created_at": "2019-05-14T08:49:39.214-07:00",
-          "days": [
-            1,
-            2,
-            3,
-            4,
-            5
-          ],
+          "days": [1, 2, 3, 4, 5],
           "end": "2019-08-02T11:00:27.000-07:00",
           "end_hour": 14,
           "end_minutes": 0,
@@ -949,6 +797,30 @@ This endpoint retrieves current, open locations.
 | --------- | -------- | ---------------------------------------------- |
 | site_id   | yes      | The Id of your site should be provided to you. |
 | timestamp | yes      | Formatted as YYYY-MM-DD                        |
+
+## Get open locations
+
+```shell
+curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/open
+```
+
+> The above command returns JSON structured like this:
+
+```json
+
+```
+
+This endpoint retrieves details of a single location.
+
+### HTTP Request
+
+`GET http://kapi.dineoncampus.com/location/info`
+
+### Query Parameters
+
+| Parameter   | Required | Description             |
+| ----------- | -------- | ----------------------- |
+| location_id | yes      | The Id of the location. |
 
 <aside class="success">
 Request volumes are logged and monitored. Request thresholds will be enforced in the near future 😀.
