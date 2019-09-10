@@ -807,7 +807,29 @@ curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/location/i
 > The above command returns JSON structured like this:
 
 ```json
-
+{
+  "location": {
+    "address": {
+      "city": "Anytown",
+      "coordinates": [
+        -118.911467,
+        34.84084
+      ],
+      "state": "California",
+      "street": "123 Anystreet",
+      "zip_code": "90001"
+    },
+    "building": {
+      "id": "5d7712054198d40e5d6b123z",
+      "name": "Building A"
+    },
+    "id": "5d52e7a44198d409cf40h762",
+    "name": "Starbucks"
+  },
+  "records": 1,
+  "request_time": 0.018607338,
+  "status": "success"
+}
 ```
 
 This endpoint retrieves details of a single location.
