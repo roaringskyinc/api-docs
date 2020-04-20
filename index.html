@@ -241,6 +241,9 @@
                   <li>
                     <a href="#get-location-details" class="toc-h2 toc-link" data-title="Get location details">Get location details</a>
                   </li>
+                  <li>
+                    <a href="#get-the-status-of-all-locations" class="toc-h2 toc-link" data-title="Get the status of all locations">Get the status of all locations</a>
+                  </li>
               </ul>
           </li>
           <li>
@@ -683,7 +686,7 @@ Request volumes are logged and monitored. Request thresholds will be enforced in
 <tr>
 <td>site_id</td>
 <td>yes</td>
-<td>The Id of your site should be provided to you.</td>
+<td>The Id of your site, provided to you.</td>
 </tr>
 <tr>
 <td>timestamp</td>
@@ -735,6 +738,64 @@ Request volumes are logged and monitored. Request thresholds will be enforced in
 <td>location_id</td>
 <td>yes</td>
 <td>The Id of the location.</td>
+</tr>
+</tbody></table>
+<h2 id='get-the-status-of-all-locations'>Get the status of all locations</h2><pre class="highlight shell tab-shell"><code>curl -H <span class="s2">"Authorization: Bearer {token}"</span> https://kapi.dineoncampus.com/locations/open
+</code></pre>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="s2">"locations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="p">{</span><span class="w">
+            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d52e7a44198d409cf40f18b"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Location Name"</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"open"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d545dbe4829d40b9fdfsdfe"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123 Any Street"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Anytown"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"California"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"90210"</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">34.673088615115525</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"lon"</span><span class="p">:</span><span class="w"> </span><span class="mf">-113.76468008756638</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"dst"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"gmt"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"phone_formatted"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"ext_formatted"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"gmt_offset"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="mf">-113.6531377</span><span class="p">,</span><span class="w">
+                    </span><span class="mf">34.6715395</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="s2">"manual_coords"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                    </span><span class="mf">34.673088615115525</span><span class="p">,</span><span class="w">
+                    </span><span class="mf">-113.76468008756638</span><span class="w">
+                </span><span class="p">],</span><span class="w">
+                </span><span class="s2">"abbreviation"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="s2">"zone_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+            </span><span class="p">}</span><span class="w">
+        </span><span class="p">}</span><span class="w">
+    </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre>
+<p>This endpoint retrieves the status and address of all locations.</p>
+<h3 id='http-request-3'>HTTP Request</h3>
+<p><code>GET http://kapi.dineoncampus.com/locations/status</code></p>
+<h3 id='query-parameters-3'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>site_id</td>
+<td>yes</td>
+<td>The Id of your site, provided to you.</td>
 </tr>
 </tbody></table>
 
