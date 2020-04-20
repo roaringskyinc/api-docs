@@ -75,10 +75,10 @@ This endpoint retrieves current, open locations.
 
 ### Query Parameters
 
-| Parameter | Required | Description                                    |
-| --------- | -------- | ---------------------------------------------- |
-| site_id   | yes      | The Id of your site should be provided to you. |
-| timestamp | yes      | Formatted as YYYY-MM-DD                        |
+| Parameter | Required | Description                           |
+| --------- | -------- | ------------------------------------- |
+| site_id   | yes      | The Id of your site, provided to you. |
+| timestamp | yes      | Formatted as YYYY-MM-DD               |
 
 ## Get location details
 
@@ -125,6 +125,64 @@ This endpoint retrieves details of a single location.
 | Parameter   | Required | Description             |
 | ----------- | -------- | ----------------------- |
 | location_id | yes      | The Id of the location. |
+
+## Get the status of all locations
+
+```shell
+curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/open
+```
+
+> The above command returns JSON structured like this:
+
+```json
+{
+    "locations": [
+        {
+            "id": "5d52e7a44198d409cf40f18b",
+            "name": "Location Name",
+            "open": true,
+            "address": {
+                "id": "5d545dbe4829d40b9fdfsdfe",
+                "street": "123 Any Street",
+                "metadata": null,
+                "city": "Anytown",
+                "state": "California",
+                "zip_code": "90210",
+                "lat": 34.673088615115525,
+                "lon": -113.76468008756638,
+                "phone": null,
+                "dst": false,
+                "gmt": 0,
+                "phone_formatted": null,
+                "ext_formatted": null,
+                "gmt_offset": 0,
+                "coordinates": [
+                    -113.6531377,
+                    34.6715395
+                ],
+                "manual_coords": [
+                    34.673088615115525,
+                    -113.76468008756638
+                ],
+                "abbreviation": null,
+                "zone_name": null
+            }
+        }
+    ]
+}
+```
+
+This endpoint retrieves the status and address of all locations.
+
+### HTTP Request
+
+`GET http://kapi.dineoncampus.com/locations/status`
+
+### Query Parameters
+
+| Parameter | Required | Description                           |
+| --------- | -------- | ------------------------------------- |
+| site_id   | yes      | The Id of your site, provided to you. |
 
 <aside class="success">
 Request volumes are logged and monitored. Request thresholds will be enforced in the near future 😀.
