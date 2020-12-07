@@ -129,7 +129,7 @@ This endpoint retrieves details of a single location.
 ## Get the status of all locations
 
 ```shell
-curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/open
+curl -H "Authorization: Bearer {token}" https://kapi.dineoncampus.com/locations/status
 ```
 
 > The above command returns JSON structured like this:
