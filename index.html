@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Dine On Campus&reg; API 0.5b</title>
 
-    <style>
+    <style media="screen">
       .highlight table td { padding: 5px; }
 .highlight table pre { margin: 0; }
 .highlight .gh {
@@ -42,7 +42,7 @@
 .highlight .cs {
   color: #75715e;
 }
-.highlight .c, .highlight .cd {
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cpf {
   color: #75715e;
 }
 .highlight .err {
@@ -126,7 +126,7 @@
 .highlight .s1 {
   color: #e6db74;
 }
-.highlight .s {
+.highlight .s, .highlight .sa, .highlight .dl {
   color: #e6db74;
 }
 .highlight .na {
@@ -141,16 +141,13 @@
 .highlight .ne {
   color: #a6e22e;
 }
-.highlight .nf {
+.highlight .nf, .highlight .fm {
   color: #a6e22e;
 }
 .highlight .vc {
   color: #ffffff;
 }
 .highlight .nn {
-  color: #ffffff;
-}
-.highlight .nl {
   color: #ffffff;
 }
 .highlight .ni {
@@ -165,7 +162,7 @@
 .highlight .vi {
   color: #ffffff;
 }
-.highlight .nv {
+.highlight .nv, .highlight .vm {
   color: #ffffff;
 }
 .highlight .w {
@@ -176,6 +173,9 @@
 }
 .highlight .n, .highlight .py, .highlight .nx {
   color: #ffffff;
+}
+.highlight .nl {
+  color: #f92672;
 }
 .highlight .ow {
   color: #f92672;
@@ -196,20 +196,107 @@
   color: #f92672;
 }
     </style>
-    <link href="stylesheets/screen.css" rel="stylesheet" media="screen" />
-    <link href="stylesheets/print.css" rel="stylesheet" media="print" />
-      <script src="javascripts/all.js"></script>
+    <style media="print">
+      * {
+        -webkit-transition:none!important;
+        transition:none!important;
+      }
+      .highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight, .highlight .w {
+  color: #586e75;
+}
+.highlight .err {
+  color: #002b36;
+  background-color: #dc322f;
+}
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1, .highlight .cs {
+  color: #657b83;
+}
+.highlight .cp {
+  color: #b58900;
+}
+.highlight .nt {
+  color: #b58900;
+}
+.highlight .o, .highlight .ow {
+  color: #93a1a1;
+}
+.highlight .p, .highlight .pi {
+  color: #93a1a1;
+}
+.highlight .gi {
+  color: #859900;
+}
+.highlight .gd {
+  color: #dc322f;
+}
+.highlight .gh {
+  color: #268bd2;
+  background-color: #002b36;
+  font-weight: bold;
+}
+.highlight .k, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kv {
+  color: #6c71c4;
+}
+.highlight .kc {
+  color: #cb4b16;
+}
+.highlight .kt {
+  color: #cb4b16;
+}
+.highlight .kd {
+  color: #cb4b16;
+}
+.highlight .s, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .sx, .highlight .s1 {
+  color: #859900;
+}
+.highlight .sa {
+  color: #6c71c4;
+}
+.highlight .sr {
+  color: #2aa198;
+}
+.highlight .si {
+  color: #d33682;
+}
+.highlight .se {
+  color: #d33682;
+}
+.highlight .nn {
+  color: #b58900;
+}
+.highlight .nc {
+  color: #b58900;
+}
+.highlight .no {
+  color: #b58900;
+}
+.highlight .na {
+  color: #268bd2;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #859900;
+}
+.highlight .ss {
+  color: #859900;
+}
+    </style>
+    <link href="stylesheets/screen-c44e5a81.css" rel="stylesheet" media="screen" />
+    <link href="stylesheets/print-953e3353.css" rel="stylesheet" media="print" />
+      <script src="javascripts/all-a9fde460.js"></script>
+
   </head>
 
   <body class="index" data-languages="[&quot;shell&quot;]">
     <a href="#" id="nav-button">
       <span>
         NAV
-        <img src="images/navbar.png" alt="Navbar" />
+        <img src="images/navbar-cad8cdcb.png" alt="" />
       </span>
     </a>
     <div class="toc-wrapper">
-      <img src="images/doc-logo.png" class="logo" alt="Doc logo" />
+      <img src="images/doc-logo-c518aad5.png" class="logo" alt="" />
         <div class="lang-selector">
               <a href="#" data-language-name="shell">shell</a>
         </div>
@@ -265,14 +352,14 @@
         <h1 id='introduction'>Introduction</h1>
 <p>Welcome to the <strong>Dine On Campus</strong>&reg; API! You can use the API to access events, special offers, locations, and menus. We&#39;ll be adding more in the near future.</p>
 
-<p>You can view code examples in the dark area to the right.</p>
+<p>You can view code examples in the area to the right.</p>
 <h1 id='authentication'>Authentication</h1>
 <blockquote>
 <p>To authorize, use this code:</p>
 </blockquote>
-<pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl -XPOST -sk -F <span class="s1">'email={email}'</span> -F <span class="s1">'password={password}'</span> https://kapi.dineoncampus.com/<span class="o">{</span>key<span class="o">}</span>
-</code></pre>
+<div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
+curl <span class="nt">-XPOST</span> <span class="nt">-sk</span> <span class="nt">-F</span> <span class="s1">'email={email}'</span> <span class="nt">-F</span> <span class="s1">'password={password}'</span> https://kapi.dineoncampus.com/<span class="o">{</span>key<span class="o">}</span>
+</code></pre></div>
 <blockquote>
 <p>Make sure to replace <code>{key}</code> with your API key</p>
 </blockquote>
@@ -281,302 +368,302 @@ curl -XPOST -sk -F <span class="s1">'email={email}'</span> -F <span class="s1">'
 
 <p><strong>Dine On Campus</strong>&reg; expects the API token to be included in request headers:</p>
 
-<p><code>Authorization: {token}</code></p>
+<p><code>Authorization: Bearer {token}</code></p>
 
 <aside class="notice">
 You must replace <code>{token}</code> with your personal API token.
 </aside>
-<h1 id='menu'>Menu</h1><h2 id='get-a-single-menu'>Get a single menu</h2><pre class="highlight shell tab-shell"><code>curl -H <span class="s2">"Authorization: Bearer {token}"</span> https://kapi.dineoncampus.com/location/menu
-</code></pre>
+<h1 id='menu'>Menu</h1><h2 id='get-a-single-menu'>Get a single menu</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-H</span> <span class="s2">"Authorization: Bearer {token}"</span> https://kapi.dineoncampus.com/location/menu
+</code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"allergen_filter"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"menu"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-08"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"from_date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9374198d409c3061864"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"periods"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"allergen_filter"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"menu"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"date"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-08"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"from_date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9374198d409c3061864"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"periods"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
       </span><span class="p">{</span><span class="w">
-        </span><span class="s2">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+        </span><span class="nl">"categories"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
           </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9384198d409c306186b"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9384198d409c306186b"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
               </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"calories"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"custom_allergens"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-                </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Leaf lettuce, tomato slice, pickle slices"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"filters"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="nl">"calories"</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"custom_allergens"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                </span><span class="nl">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Leaf lettuce, tomato slice, pickle slices"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"filters"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5934c5723191a24f12b52fd1"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tomato"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"allergen"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5934c5723191a24f12b52fd1"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tomato"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"allergen"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5934c5733191a24f12b52ff3"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mustard*"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"allergen"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5934c5733191a24f12b52ff3"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mustard*"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"allergen"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5934c5743191a24f12b53028"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Beef*"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"allergen"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5934c5743191a24f12b53028"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Beef*"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"allergen"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5934c5743191a24f12b5302a"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pork*"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"allergen"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5934c5743191a24f12b5302a"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Pork*"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"allergen"</span><span class="w">
                   </span><span class="p">}</span><span class="w">
                 </span><span class="p">],</span><span class="w">
-                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59e4ffcc28d0e73e15f812d7"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"ingredients"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tomatoes Fresh Each Slice 1/2</span><span class="se">\"</span><span class="s2">, Pickles Dill Hamburger Slices, Lettuce Leaf Individual Leaf Fresh"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"mrn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"13163"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"mrn_full"</span><span class="p">:</span><span class="w"> </span><span class="s2">"13163.0"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Burger Accompaniments"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"nutrients"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59e4ffcc28d0e73e15f812d7"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"ingredients"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Tomatoes Fresh Each Slice 1/2</span><span class="se">\"</span><span class="s2">, Pickles Dill Hamburger Slices, Lettuce Leaf Individual Leaf Fresh"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"mrn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"13163"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"mrn_full"</span><span class="p">:</span><span class="w"> </span><span class="s2">"13163.0"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Burger Accompaniments"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"nutrients"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b60"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Calories"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kcal"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b60"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Calories"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kcal"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"10"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b61"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Calories From Fat"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kcal"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b61"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Calories From Fat"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kcal"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b62"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cholesterol (mg)"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mg"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b62"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cholesterol (mg)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mg"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b63"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dietary Fiber (g)"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt; 1"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;1"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b63"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dietary Fiber (g)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt; 1"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;1"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b64"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Protein (g)"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b64"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Protein (g)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b65"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Saturated Fat (g)"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b65"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Saturated Fat (g)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b66"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sodium (mg)"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mg"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"170"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"170"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b66"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sodium (mg)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mg"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"170"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"170"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b67"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sugar (g)"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt; 1"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;1"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b67"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sugar (g)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt; 1"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;1"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b68"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Total Carbohydrates (g)"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b68"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Total Carbohydrates (g)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b69"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Total Fat (g)"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b69"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Total Fat (g)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b6a"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Trans Fat (g)"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b6a"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Trans Fat (g)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b6b"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vitamin D (IU)"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IU"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061b6b"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vitamin D (IU)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IU"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
                   </span><span class="p">}</span><span class="w">
                 </span><span class="p">],</span><span class="w">
-                </span><span class="s2">"portion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 serving(s)"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"rev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"sort_order"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"webtrition_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">115334070</span><span class="w">
+                </span><span class="nl">"portion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1 serving(s)"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"qty"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"rev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"sort_order"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"webtrition_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">115334070</span><span class="w">
 
-            </span><span class="p">],</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Grill"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"sort_order"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+            </span><span class="err">]</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Grill"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"sort_order"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
           </span><span class="p">},</span><span class="w">
           </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9384198d409c306186c"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9384198d409c306186c"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"items"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
               </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"calories"</span><span class="p">:</span><span class="w"> </span><span class="mi">190</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"custom_allergens"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
-                </span><span class="s2">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Chicken breasts marinated in Lemon Dijon vinaigrette and pan seared"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"filters"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="nl">"calories"</span><span class="p">:</span><span class="w"> </span><span class="mi">190</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"custom_allergens"</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span><span class="w">
+                </span><span class="nl">"desc"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Chicken breasts marinated in Lemon Dijon vinaigrette and pan seared"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"filters"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5934c5733191a24f12b52fef"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alcohol"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"allergen"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5934c5733191a24f12b52fef"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Alcohol"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"allergen"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5934c5743191a24f12b53029"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mustard"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"allergen"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5934c5743191a24f12b53029"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mustard"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"allergen"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5934c576ee596f19f2126a40"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Poultry"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"allergen"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5934c576ee596f19f2126a40"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Poultry"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"allergen"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a67f531a4227a2fac230c8e"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Balanced U"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"label"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5a67f531a4227a2fac230c8e"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Balanced U"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"label"</span><span class="w">
                   </span><span class="p">}</span><span class="w">
                 </span><span class="p">],</span><span class="w">
-                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59ee92e528d0e73e15f87965"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"ingredients"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Chicken Breast Boneless Skinless Random Raw, Oil Olive, Juice Lemon Fresh, Mustard Dijon, Honey, Oregano Fresh Chopped, Salt Kosher, Spice Pepper Black Ground"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"mrn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59037"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"mrn_full"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59037.2"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lemon Oregano Chicken"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"nutrients"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59ee92e528d0e73e15f87965"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"ingredients"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Chicken Breast Boneless Skinless Random Raw, Oil Olive, Juice Lemon Fresh, Mustard Dijon, Honey, Oregano Fresh Chopped, Salt Kosher, Spice Pepper Black Ground"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"mrn"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59037"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"mrn_full"</span><span class="p">:</span><span class="w"> </span><span class="s2">"59037.2"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lemon Oregano Chicken"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"nutrients"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061ba8"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Calories"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kcal"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"190"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"190"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061ba8"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Calories"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kcal"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"190"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"190"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061ba9"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Calories From Fat"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kcal"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"80"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"80"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061ba9"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Calories From Fat"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"kcal"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"80"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"80"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061baa"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cholesterol (mg)"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mg"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"70"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"70"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061baa"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Cholesterol (mg)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mg"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"70"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"70"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061bab"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dietary Fiber (g)"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061bab"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Dietary Fiber (g)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061bac"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Protein (g)"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"26"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"26"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061bac"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Protein (g)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"26"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"26"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061bad"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Saturated Fat (g)"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.5"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.5"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061bad"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Saturated Fat (g)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.5"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"1.5"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061bae"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sodium (mg)"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mg"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"125"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"125"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061bae"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sodium (mg)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"mg"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"125"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"125"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061baf"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sugar (g)"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt; 1"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;1"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061baf"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Sugar (g)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt; 1"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;1"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061bb0"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Total Carbohydrates (g)"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt; 1"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;1"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061bb0"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Total Carbohydrates (g)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt; 1"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"&lt;1"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061bb1"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Total Fat (g)"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061bb1"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Total Fat (g)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"9"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061bb2"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Trans Fat (g)"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061bb2"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Trans Fat (g)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"g"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"-"</span><span class="w">
                   </span><span class="p">},</span><span class="w">
                   </span><span class="p">{</span><span class="w">
-                    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061bb3"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vitamin D (IU)"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IU"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5+"</span><span class="p">,</span><span class="w">
-                    </span><span class="s2">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5+"</span><span class="w">
+                    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9594198d409c3061bb3"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vitamin D (IU)"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"uom"</span><span class="p">:</span><span class="w"> </span><span class="s2">"IU"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5+"</span><span class="p">,</span><span class="w">
+                    </span><span class="nl">"value_numeric"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5+"</span><span class="w">
                   </span><span class="p">}</span><span class="w">
                 </span><span class="p">],</span><span class="w">
-                </span><span class="s2">"portion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4 oz meat"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"qty"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"rev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"sort_order"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"webtrition_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">115334090</span><span class="w">
+                </span><span class="nl">"portion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"4 oz meat"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"qty"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"rev"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"sort_order"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"webtrition_id"</span><span class="p">:</span><span class="w"> </span><span class="mi">115334090</span><span class="w">
               </span><span class="p">}</span><span class="w">              
             </span><span class="p">],</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mongolian"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"sort_order"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mongolian"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"sort_order"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w">
           </span><span class="p">}</span><span class="w">
         </span><span class="p">],</span><span class="w">
-        </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9384198d409c306186a"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lunch"</span><span class="p">,</span><span class="w">
-        </span><span class="s2">"sort_order"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d23f9384198d409c306186a"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lunch"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"sort_order"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="w">
       </span><span class="p">}</span><span class="w">
     </span><span class="p">],</span><span class="w">
-    </span><span class="s2">"to_date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+    </span><span class="nl">"to_date"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"records"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"request_time"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.032709555</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
-</span><span class="p">}</span><span class="w">
-</span></code></pre>
+  </span><span class="s2">"records"</span><span class="err">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"request_time"</span><span class="err">:</span><span class="w"> </span><span class="mf">0.032709555</span><span class="p">,</span><span class="w">
+  </span><span class="s2">"status"</span><span class="err">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+</span><span class="err">}</span><span class="w">
+</span></code></pre></div>
 <p>This endpoint retrieves a menu for a specific day.</p>
 <h3 id='http-request'>HTTP Request</h3>
-<p><code>GET http://kapi.dineoncampus.com/menu</code></p>
+<p><code>GET http://kapi.dineoncampus.com/location/menu</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
@@ -610,68 +697,68 @@ You must replace <code>{token}</code> with your personal API token.
 <aside class="success">
 Request volumes are logged and monitored. Request thresholds will be enforced in the near future 😀.
 </aside>
-<h1 id='locations'>Locations</h1><h2 id='get-open-locations'>Get open locations</h2><pre class="highlight shell tab-shell"><code>curl -H <span class="s2">"Authorization: Bearer {token}"</span> https://kapi.dineoncampus.com/locations/open
-</code></pre>
+<h1 id='locations'>Locations</h1><h2 id='get-open-locations'>Get open locations</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-H</span> <span class="s2">"Authorization: Bearer {token}"</span> https://kapi.dineoncampus.com/locations/open
+</code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"location_schedules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"location_schedules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DOC::WebtritionLocation"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b8030be1178e90bcf85640b"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Business Perks"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"schedules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+      </span><span class="nl">"_type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"DOC::WebtritionLocation"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5b8030be1178e90bcf85640b"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Business Perks"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"schedules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-01-11T07:02:36.531-08:00"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"days"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">],</span><span class="w">
-          </span><span class="s2">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-07T15:00:19.000-07:00"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"end_hour"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"end_minutes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5c38b00cbddf43091fa890bf"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"open_late"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-01-14T04:00:19.000-08:00"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"start_hour"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"start_minutes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"location"</span><span class="w">
+          </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-01-11T07:02:36.531-08:00"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"days"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">],</span><span class="w">
+          </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-07T15:00:19.000-07:00"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"end_hour"</span><span class="p">:</span><span class="w"> </span><span class="mi">18</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"end_minutes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5c38b00cbddf43091fa890bf"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"open_late"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-01-14T04:00:19.000-08:00"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"start_hour"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"start_minutes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"location"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-01-11T07:02:47.823-08:00"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"days"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="w">
-          </span><span class="s2">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-03T10:00:37.000-07:00"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"end_hour"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"end_minutes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5c38b017bddf43090b799e51"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"open_late"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-01-18T04:00:37.000-08:00"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"start_hour"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"start_minutes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"location"</span><span class="w">
+          </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-01-11T07:02:47.823-08:00"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"days"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">5</span><span class="p">],</span><span class="w">
+          </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-03T10:00:37.000-07:00"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"end_hour"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"end_minutes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5c38b017bddf43090b799e51"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"open_late"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-01-18T04:00:37.000-08:00"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"start_hour"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"start_minutes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"location"</span><span class="w">
         </span><span class="p">},</span><span class="w">
         </span><span class="p">{</span><span class="w">
-          </span><span class="s2">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-01T12:56:51.732-07:00"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"days"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="w">
-          </span><span class="s2">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-08T14:00:37.000-07:00"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"end_hour"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"end_minutes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5cc9fa031ca48e0e6f7cb372"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"open_late"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-08T05:00:37.000-07:00"</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"start_hour"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"start_minutes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-          </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"location"</span><span class="w">
+          </span><span class="nl">"created_at"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-01T12:56:51.732-07:00"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"days"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">3</span><span class="p">],</span><span class="w">
+          </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-08T14:00:37.000-07:00"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"end_hour"</span><span class="p">:</span><span class="w"> </span><span class="mi">17</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"end_minutes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5cc9fa031ca48e0e6f7cb372"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"open_late"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-05-08T05:00:37.000-07:00"</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"start_hour"</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"start_minutes"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+          </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"location"</span><span class="w">
         </span><span class="p">}</span><span class="w">
       </span><span class="p">],</span><span class="w">
-      </span><span class="s2">"sort_order"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"webtrition_version"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
+      </span><span class="nl">"sort_order"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"type"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"webtrition_version"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"records"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"request_time"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.903337163</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+  </span><span class="nl">"records"</span><span class="p">:</span><span class="w"> </span><span class="mi">13</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"request_time"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.903337163</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></code></pre></div>
 <p>This endpoint retrieves current, open locations.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET http://kapi.dineoncampus.com/locations/open</code></p>
@@ -694,35 +781,35 @@ Request volumes are logged and monitored. Request thresholds will be enforced in
 <td>Formatted as YYYY-MM-DD</td>
 </tr>
 </tbody></table>
-<h2 id='get-location-details'>Get location details</h2><pre class="highlight shell tab-shell"><code>curl -H <span class="s2">"Authorization: Bearer {token}"</span> https://kapi.dineoncampus.com/location/info
-</code></pre>
+<h2 id='get-location-details'>Get location details</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-H</span> <span class="s2">"Authorization: Bearer {token}"</span> https://kapi.dineoncampus.com/location/info
+</code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-    </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Anytown"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"location"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+    </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Anytown"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="mf">-118.911467</span><span class="p">,</span><span class="w">
         </span><span class="mf">34.84084</span><span class="w">
       </span><span class="p">],</span><span class="w">
-      </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"California"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123 Anystreet"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"90001"</span><span class="w">
+      </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"California"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123 Anystreet"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"90001"</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"building"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d7712054198d40e5d6b123z"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Building A"</span><span class="w">
+    </span><span class="nl">"building"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d7712054198d40e5d6b123z"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Building A"</span><span class="w">
     </span><span class="p">},</span><span class="w">
-    </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d52e7a44198d409cf40h762"</span><span class="p">,</span><span class="w">
-    </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Starbucks"</span><span class="w">
+    </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d52e7a44198d409cf40h762"</span><span class="p">,</span><span class="w">
+    </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Starbucks"</span><span class="w">
   </span><span class="p">},</span><span class="w">
-  </span><span class="s2">"records"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"request_time"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.018607338</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+  </span><span class="nl">"records"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"request_time"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.018607338</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></code></pre></div>
 <p>This endpoint retrieves details of a single location.</p>
 <h3 id='http-request-2'>HTTP Request</h3>
 <p><code>GET http://kapi.dineoncampus.com/location/info</code></p>
@@ -740,47 +827,47 @@ Request volumes are logged and monitored. Request thresholds will be enforced in
 <td>The Id of the location.</td>
 </tr>
 </tbody></table>
-<h2 id='get-the-status-of-all-locations'>Get the status of all locations</h2><pre class="highlight shell tab-shell"><code>curl -H <span class="s2">"Authorization: Bearer {token}"</span> https://kapi.dineoncampus.com/locations/open
-</code></pre>
+<h2 id='get-the-status-of-all-locations'>Get the status of all locations</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-H</span> <span class="s2">"Authorization: Bearer {token}"</span> https://kapi.dineoncampus.com/locations/status
+</code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-    </span><span class="s2">"locations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+    </span><span class="nl">"locations"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
         </span><span class="p">{</span><span class="w">
-            </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d52e7a44198d409cf40f18b"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Location Name"</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"open"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-            </span><span class="s2">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
-                </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d545dbe4829d40b9fdfsdfe"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123 Any Street"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Anytown"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"California"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"90210"</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">34.673088615115525</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"lon"</span><span class="p">:</span><span class="w"> </span><span class="mf">-113.76468008756638</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"phone"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"dst"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"gmt"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"phone_formatted"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"ext_formatted"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"gmt_offset"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+            </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d52e7a44198d409cf40f18b"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Location Name"</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"open"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+            </span><span class="nl">"address"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+                </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d545dbe4829d40b9fdfsdfe"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"street"</span><span class="p">:</span><span class="w"> </span><span class="s2">"123 Any Street"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"metadata"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"city"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Anytown"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"state"</span><span class="p">:</span><span class="w"> </span><span class="s2">"California"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"zip_code"</span><span class="p">:</span><span class="w"> </span><span class="s2">"90210"</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"lat"</span><span class="p">:</span><span class="w"> </span><span class="mf">34.673088615115525</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"lon"</span><span class="p">:</span><span class="w"> </span><span class="mf">-113.76468008756638</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"phone"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"dst"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"gmt"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"phone_formatted"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"ext_formatted"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"gmt_offset"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"coordinates"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                     </span><span class="mf">-113.6531377</span><span class="p">,</span><span class="w">
                     </span><span class="mf">34.6715395</span><span class="w">
                 </span><span class="p">],</span><span class="w">
-                </span><span class="s2">"manual_coords"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+                </span><span class="nl">"manual_coords"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
                     </span><span class="mf">34.673088615115525</span><span class="p">,</span><span class="w">
                     </span><span class="mf">-113.76468008756638</span><span class="w">
                 </span><span class="p">],</span><span class="w">
-                </span><span class="s2">"abbreviation"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-                </span><span class="s2">"zone_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
+                </span><span class="nl">"abbreviation"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+                </span><span class="nl">"zone_name"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="w">
             </span><span class="p">}</span><span class="w">
         </span><span class="p">}</span><span class="w">
     </span><span class="p">]</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></code></pre></div>
 <p>This endpoint retrieves the status and address of all locations.</p>
 <h3 id='http-request-3'>HTTP Request</h3>
 <p><code>GET http://kapi.dineoncampus.com/locations/status</code></p>
@@ -802,58 +889,58 @@ Request volumes are logged and monitored. Request thresholds will be enforced in
 <aside class="success">
 Request volumes are logged and monitored. Request thresholds will be enforced in the near future 😀.
 </aside>
-<h1 id='events'>Events</h1><h2 id='get-upcoming-events'>Get upcoming events</h2><pre class="highlight shell tab-shell"><code>curl -H <span class="s2">"Authorization: Bearer {token}"</span> https://kapi.dineoncampus.com/events/upcoming
-</code></pre>
+<h1 id='events'>Events</h1><h2 id='get-upcoming-events'>Get upcoming events</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-H</span> <span class="s2">"Authorization: Bearer {token}"</span> https://kapi.dineoncampus.com/events/upcoming
+</code></pre></div>
 <blockquote>
 <p>The above command returns JSON structured like this:</p>
 </blockquote>
-<pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
-  </span><span class="s2">"current_events"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"current_events"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Looking to learn more about Superfood Tomato?</span><span class="se">\n</span><span class="s2">Make sure to stop by Jasper Kane Café from</span><span class="se">\n</span><span class="s2">1PM – 2PM to learn more about the nutritional</span><span class="se">\n</span><span class="s2">benefits of Tomatoes."</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-09T11:00:00.000-07:00"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"featured"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d13d84e4198d409c39c8056"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-09T10:00:00.000-07:00"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Superfood Tabling at Jasper Kane Café"</span><span class="w">
+      </span><span class="nl">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Looking to learn more about Superfood Tomato?</span><span class="se">\n</span><span class="s2">Make sure to stop by Jasper Kane Café from</span><span class="se">\n</span><span class="s2">1PM – 2PM to learn more about the nutritional</span><span class="se">\n</span><span class="s2">benefits of Tomatoes."</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-09T11:00:00.000-07:00"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"featured"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d13d84e4198d409c39c8056"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-09T10:00:00.000-07:00"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Superfood Tabling at Jasper Kane Café"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Locally grown produce and freshly prepared</span><span class="se">\n</span><span class="s2">bakery items will be available at The</span><span class="se">\n</span><span class="s2">Marketplace at Kimmel from 11AM – 2PM!</span><span class="se">\n</span><span class="s2">Don’t miss out on supporting some of our</span><span class="se">\n</span><span class="s2">amazing local farmers &amp; tasting their delicious</span><span class="se">\n</span><span class="s2">produce!"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-11T11:00:00.000-07:00"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"featured"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d13d8774198d409c39c9158"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-11T08:00:00.000-07:00"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Farmers Market at The Marketplace at Kimmel"</span><span class="w">
+      </span><span class="nl">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Locally grown produce and freshly prepared</span><span class="se">\n</span><span class="s2">bakery items will be available at The</span><span class="se">\n</span><span class="s2">Marketplace at Kimmel from 11AM – 2PM!</span><span class="se">\n</span><span class="s2">Don’t miss out on supporting some of our</span><span class="se">\n</span><span class="s2">amazing local farmers &amp; tasting their delicious</span><span class="se">\n</span><span class="s2">produce!"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-11T11:00:00.000-07:00"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"featured"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d13d8774198d409c39c9158"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-11T08:00:00.000-07:00"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Farmers Market at The Marketplace at Kimmel"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"We’re tossing up something special at the</span><span class="se">\n</span><span class="s2">NYU Eats at Downstein for dinner on</span><span class="se">\n</span><span class="s2">Monday night. Make sure to stop by to create</span><span class="se">\n</span><span class="s2">your own wings."</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-15T17:00:00.000-07:00"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"featured"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d13d8bf4198d409c39c9174"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-15T14:00:00.000-07:00"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Wing Day at NYU Eats at Downstein"</span><span class="w">
+      </span><span class="nl">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"We’re tossing up something special at the</span><span class="se">\n</span><span class="s2">NYU Eats at Downstein for dinner on</span><span class="se">\n</span><span class="s2">Monday night. Make sure to stop by to create</span><span class="se">\n</span><span class="s2">your own wings."</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-15T17:00:00.000-07:00"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"featured"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d13d8bf4198d409c39c9174"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-15T14:00:00.000-07:00"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Wing Day at NYU Eats at Downstein"</span><span class="w">
     </span><span class="p">},</span><span class="w">
     </span><span class="p">{</span><span class="w">
-      </span><span class="s2">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Looking to learn more about Superfood Tomato?</span><span class="se">\n</span><span class="s2">Make sure to stop by The Marketplace at</span><span class="se">\n</span><span class="s2">Kimmel from 1PM – 2PM to learn more about the</span><span class="se">\n</span><span class="s2">nutritional benefits of Tomatoes with RD</span><span class="se">\n</span><span class="s2">Christina."</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-16T11:00:00.000-07:00"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"featured"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d13d8f14198d409c39c9181"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-16T10:00:00.000-07:00"</span><span class="p">,</span><span class="w">
-      </span><span class="s2">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Superfood Tabling at The Marketplace at Kimmel"</span><span class="w">
+      </span><span class="nl">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"description"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Looking to learn more about Superfood Tomato?</span><span class="se">\n</span><span class="s2">Make sure to stop by The Marketplace at</span><span class="se">\n</span><span class="s2">Kimmel from 1PM – 2PM to learn more about the</span><span class="se">\n</span><span class="s2">nutritional benefits of Tomatoes with RD</span><span class="se">\n</span><span class="s2">Christina."</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"end"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-16T11:00:00.000-07:00"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"featured"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5d13d8f14198d409c39c9181"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"picture"</span><span class="p">:</span><span class="w"> </span><span class="kc">null</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"start"</span><span class="p">:</span><span class="w"> </span><span class="s2">"2019-07-16T10:00:00.000-07:00"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Superfood Tabling at The Marketplace at Kimmel"</span><span class="w">
     </span><span class="p">}</span><span class="w">
   </span><span class="p">],</span><span class="w">
-  </span><span class="s2">"event_slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"events"</span><span class="p">,</span><span class="w">
-  </span><span class="s2">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
+  </span><span class="nl">"event_slug"</span><span class="p">:</span><span class="w"> </span><span class="s2">"events"</span><span class="p">,</span><span class="w">
+  </span><span class="nl">"status"</span><span class="p">:</span><span class="w"> </span><span class="s2">"success"</span><span class="w">
 </span><span class="p">}</span><span class="w">
-</span></code></pre>
+</span></code></pre></div>
 <p>This endpoint retrieves all upcoming events.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET http://kapi.dineoncampus.com/events/upcoming</code></p>
