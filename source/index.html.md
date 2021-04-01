@@ -23,7 +23,7 @@ search: true
 
 Welcome to the **Dine On Campus**&reg; API! You can use the API to access events, special offers, locations, and menus. We'll be adding more in the near future.
 
-You can view code examples in the dark area to the right.
+You can view code examples in the area to the right.
 
 # Authentication
 
@@ -40,7 +40,7 @@ curl -XPOST -sk -F 'email={email}' -F 'password={password}' https://kapi.dineonc
 
 **Dine On Campus**&reg; expects the API token to be included in request headers:
 
-`Authorization: {token}`
+`Authorization: Bearer {token}`
 
 <aside class="notice">
 You must replace <code>{token}</code> with your personal API token.
@@ -345,7 +345,7 @@ This endpoint retrieves a menu for a specific day.
 
 ### HTTP Request
 
-`GET http://kapi.dineoncampus.com/menu`
+`GET http://kapi.dineoncampus.com/location/menu`
 
 ### Query Parameters
 
