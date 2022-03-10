@@ -350,6 +350,14 @@
               </ul>
           </li>
           <li>
+            <a href="#staff" class="toc-h1 toc-link" data-title="Staff">Staff</a>
+              <ul class="toc-list-h2">
+                  <li>
+                    <a href="#get-staff" class="toc-h2 toc-link" data-title="Get staff">Get staff</a>
+                  </li>
+              </ul>
+          </li>
+          <li>
             <a href="#errors" class="toc-h1 toc-link" data-title="Errors">Errors</a>
           </li>
       </ul>
@@ -358,7 +366,7 @@
       <div class="dark-box"></div>
       <div class="content">
         <h1 id='introduction'>Introduction</h1>
-<p>Welcome to the <strong>Dine On Campus</strong>&reg; API! You can use the API to access events, specials, locations, and menus. We&#39;ll be adding more in the near future.</p>
+<p>Welcome to the <strong>Dine On Campus</strong>&reg; API! You can use the API to access events, specials, staff, locations, and menus. We&#39;ll be adding more in the near future.</p>
 
 <p>You can view code examples in the area to the right.</p>
 <h1 id='authentication'>Authentication</h1>
@@ -993,6 +1001,53 @@ Request volumes are logged and monitored. Request thresholds will be enforced in
 <p>This endpoint retrieves all current specials.</p>
 <h3 id='http-request'>HTTP Request</h3>
 <p><code>GET http://kapi.dineoncampus.com/specials</code></p>
+<h3 id='query-parameters'>Query Parameters</h3>
+<table><thead>
+<tr>
+<th>Parameter</th>
+<th>Required</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>site_id</td>
+<td>yes</td>
+<td>The Id of your site should be provided to you.</td>
+</tr>
+</tbody></table>
+
+<aside class="success">
+Request volumes are logged and monitored. Request thresholds will be enforced in the near future 😀.
+</aside>
+<h1 id='staff'>Staff</h1><h2 id='get-staff'>Get staff</h2><div class="highlight"><pre class="highlight shell tab-shell"><code>curl <span class="nt">-H</span> <span class="s2">"Authorization: Bearer {token}"</span> https://kapi.dineoncampus.com/staff
+</code></pre></div>
+<blockquote>
+<p>The above command returns JSON structured like this:</p>
+</blockquote>
+<div class="highlight"><pre class="highlight json tab-json"><code><span class="p">{</span><span class="w">
+  </span><span class="nl">"staff"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w">
+    </span><span class="p">{</span><span class="w">
+      </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"5ac2df8ff3eeb600c67c22b9"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"first_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"First name"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"last_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Last name"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"title"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Title"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"bio"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean quis lectus ut orci aliquam rhoncus. Suspendisse imperdiet ut risus eget posuere. Donec eu dapibus nulla, dapibus pharetra nisi. Ut porttitor velit non aliquet congue. In at felis tincidunt, gravida ligula ac, lobortis enim. Vestibulum eget lorem efficitur, euismod augue in, vulputate purus. Nulla accumsan velit non mollis vulputate."</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"email"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Email address"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"active"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"phone"</span><span class="p">:</span><span class="w"> </span><span class="s2">"0000000000"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"sort_order"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"phone_formatted"</span><span class="p">:</span><span class="w"> </span><span class="s2">"(000) 000 - 0000"</span><span class="p">,</span><span class="w">
+      </span><span class="nl">"picture"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w">
+        </span><span class="nl">"id"</span><span class="p">:</span><span class="w"> </span><span class="s2">"6196e066a9f13a36eadf7349"</span><span class="p">,</span><span class="w">
+        </span><span class="nl">"file_name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"https://api.dineoncampus.com/files/staff/0e2b7c78-7dd8-4aad-892b-11aa64c1a23f.jpg"</span><span class="w">
+      </span><span class="p">}</span><span class="w">
+    </span><span class="p">}</span><span class="w">
+  </span><span class="p">]</span><span class="w">
+</span><span class="p">}</span><span class="w">
+</span></code></pre></div>
+<p>This endpoint retrieves all active staff.</p>
+<h3 id='http-request'>HTTP Request</h3>
+<p><code>GET http://kapi.dineoncampus.com/staff</code></p>
 <h3 id='query-parameters'>Query Parameters</h3>
 <table><thead>
 <tr>
