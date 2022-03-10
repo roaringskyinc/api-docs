@@ -1,5 +1,5 @@
 ---
-title: Dine On Campus&reg; API 0.5b
+title: Dine On Campus&reg; API 0.6b
 
 language_tabs: # must be one of https://git.io/vQNgJ
   - shell
@@ -14,6 +14,7 @@ toc_footers:
 includes:
   - locations
   - events
+  - specials
   - errors
 
 search: true
@@ -21,7 +22,7 @@ search: true
 
 # Introduction
 
-Welcome to the **Dine On Campus**&reg; API! You can use the API to access events, special offers, locations, and menus. We'll be adding more in the near future.
+Welcome to the **Dine On Campus**&reg; API! You can use the API to access events, specials, locations, and menus. We'll be adding more in the near future.
 
 You can view code examples in the area to the right.
 
