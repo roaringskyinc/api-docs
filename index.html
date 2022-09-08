@@ -374,12 +374,8 @@
 <p>To authorize, use this code:</p>
 </blockquote>
 <div class="highlight"><pre class="highlight shell tab-shell"><code><span class="c"># With shell, you can just pass the correct header with each request</span>
-curl <span class="nt">-XPOST</span> <span class="nt">-sk</span> <span class="nt">-F</span> <span class="s1">'email={email}'</span> <span class="nt">-F</span> <span class="s1">'password={password}'</span> https://kapi.dineoncampus.com/<span class="o">{</span>key<span class="o">}</span>
+curl <span class="nt">-XPOST</span> <span class="nt">-sk</span> <span class="nt">-F</span> <span class="s1">'email={email}'</span> <span class="nt">-F</span> <span class="s1">'password={password}'</span> https://kapi.dineoncampus.com/token
 </code></pre></div>
-<blockquote>
-<p>Make sure to replace <code>{key}</code> with your API key</p>
-</blockquote>
-
 <p><strong>Dine On Campus</strong>&reg; uses API tokens for access on a per-developer basis. To request access for an additional developer &mdash; for now &mdash; please contact Dylan Bromby (dylan@roaringsky.com). We&#39;ll be automating this process in the near future.</p>
 
 <p><strong>Dine On Campus</strong>&reg; expects the API token to be included in request headers:</p>
