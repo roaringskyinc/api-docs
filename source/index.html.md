@@ -33,10 +33,8 @@ You can view code examples in the area to the right.
 
 ```shell
 # With shell, you can just pass the correct header with each request
-curl -XPOST -sk -F 'email={email}' -F 'password={password}' https://kapi.dineoncampus.com/{key}
+curl -XPOST -sk -F 'email={email}' -F 'password={password}' https://kapi.dineoncampus.com/token
 ```
-
-> Make sure to replace `{key}` with your API key
 
 **Dine On Campus**&reg; uses API tokens for access on a per-developer basis. To request access for an additional developer &mdash; for now &mdash; please contact Dylan Bromby (dylan@roaringsky.com). We'll be automating this process in the near future.
 
