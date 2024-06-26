@@ -61,7 +61,7 @@ This endpoint retrieves all upcoming events.
 
 ### HTTP Request
 
-`GET http://kapi.dineoncampus.com/events/upcoming`
+`GET https://kapi.dineoncampus.com/events/upcoming`
 
 ### Query Parameters
 

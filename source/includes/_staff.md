@@ -35,7 +35,7 @@ This endpoint retrieves all active staff.
 
 ### HTTP Request
 
-`GET http://kapi.dineoncampus.com/staff`
+`GET https://kapi.dineoncampus.com/staff`
 
 ### Query Parameters
 

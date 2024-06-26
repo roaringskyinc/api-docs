@@ -29,7 +29,7 @@ This endpoint retrieves all current specials.
 
 ### HTTP Request
 
-`GET http://kapi.dineoncampus.com/specials`
+`GET https://kapi.dineoncampus.com/specials`
 
 ### Query Parameters
 

@@ -71,7 +71,7 @@ This endpoint retrieves current, open locations.
 
 ### HTTP Request
 
-`GET http://kapi.dineoncampus.com/locations/open`
+`GET https://kapi.dineoncampus.com/locations/open`
 
 ### Query Parameters
 
@@ -118,7 +118,7 @@ This endpoint retrieves details of a single location.
 
 ### HTTP Request
 
-`GET http://kapi.dineoncampus.com/location/info`
+`GET https://kapi.dineoncampus.com/location/info`
 
 ### Query Parameters
 
@@ -176,7 +176,7 @@ This endpoint retrieves the status and address of all locations.
 
 ### HTTP Request
 
-`GET http://kapi.dineoncampus.com/locations/status`
+`GET https://kapi.dineoncampus.com/locations/status`
 
 ### Query Parameters
 

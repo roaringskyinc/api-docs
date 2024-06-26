@@ -36,7 +36,7 @@ You can view code examples in the area to the right.
 curl -XPOST -sk -F 'email={email}' -F 'password={password}' https://kapi.dineoncampus.com/token
 ```
 
-**Dine On Campus**&reg; uses API tokens for access on a per-developer basis. To request access for an additional developer &mdash; for now &mdash; please contact Dylan Bromby (dylan@roaringsky.com). We'll be automating this process in the near future.
+**Dine On Campus**&reg; uses API tokens for access on a per-developer basis. To request access for an additional developer &mdash; for now &mdash; please contact Dylan Bromby (<dylan@roaringsky.com>). We'll be automating this process in the near future.
 
 **Dine On Campus**&reg; expects the API token to be included in request headers:
 
@@ -345,7 +345,7 @@ This endpoint retrieves a menu for a specific day.
 
 ### HTTP Request
 
-`GET http://kapi.dineoncampus.com/location/menu`
+`GET https://kapi.dineoncampus.com/location/menu`
 
 ### Query Parameters
 
